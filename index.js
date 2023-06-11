@@ -1,5 +1,5 @@
 const readline = require("readline");
-
+const lodash = require("lodash")
 let rl = readline.createInterface(process.stdin, process.stdout);
 const object = {
   a: 1,
@@ -64,18 +64,36 @@ const object = {
   9: 60,
   0: 61,
 };
-
-rl.question("Enter your string: ", (string) => {
-  let array = [...string];
-  let s = " ";
-
-  array.forEach((value) => {
-    if (value === " ") {
-      s += "  ";
-    } else {
-      s += object[value.toLowerCase()] + " ";
-    }
-  });
-  console.log("Your encoded text is: " + s);
-  rl.close();
+rl.question("Encode or Decode (e/d): ", (type) => {
+  if (type.toLowerCase() === "e") {
+    rl.question("Enter your string to encode: ", (string) => {
+      let array = [...string];
+      let s= " ";
+      array.forEach((value) => {
+        if (value === " ") {
+          s += "  ";
+        } else {
+          s+= object[value.toLowerCase()] + " ";
+        }
+      });
+      console.log("Your encoded text is: " + s);
+      rl.close();
+    });
+  } else if (type.toLowerCase() === "d") {
+    rl.question("Enter your string to decode: ", (string) => {
+      let array = string.split(" ");
+      let s = "";
+      array.forEach((value) => {
+        if (value === "") {
+          s += " ";
+        } else {
+          s += lodash.invert(object)[value];
+        }
+      });
+      console.log("Your decoded text is: " + s);
+      rl.close();
+    })
+  } else {
+    console.log('Not a valid type. Type "d" for decoding and "e" for encoding');
+  }
 });

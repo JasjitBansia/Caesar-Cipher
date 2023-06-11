@@ -1,7 +1,7 @@
 {
-  "name": "encoder",
+  "name": "encoder-and-decoder",
   "version": "1.0.0",
-  "description": "Encoder",
+  "description": "Encoder and Decoder",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.21",
     "nodemon": "^2.0.22"
   }
 }
