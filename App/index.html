@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="./Assets/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <p id="showText"></p>
+    <div id="inputArea">
+      <textarea id="textInput" wrap="soft"></textarea>
+      <button id="manipulateTextButton">Encode</button>
+    </div>
+    <div id="selections">
+      <select id="encodeOrDecode">
+        <option value="Encode">Encode</option>
+        <option value="Decode">Decode</option>
+      </select>
+      with a shift of <input id="shiftInput" type="text" />
+      <span id="encodeOrDecodeHelpText"> in the </span>
+      <select id="shiftType">
+        <option value="forward">Forward</option>
+        <option value="backward">Backward</option>
+      </select>
+      direction
+    </div>
+  </body>
+
+  <script src="index.js" type="module"></script>
+  <script src="./Functions/encode.js"></script>
+  <script src="./Functions/decode.js"></script>
+</html>

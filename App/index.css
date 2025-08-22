@@ -1,0 +1,110 @@
+html {
+  background: linear-gradient(#74d2de, #a9c4c7);
+  height: 100%;
+}
+
+button {
+  border: 0px;
+}
+
+#inputArea {
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inputArea button {
+  position: static;
+  height: 8vh;
+  width: 70vw;
+  margin-top: 10px;
+  font-size: 5vw;
+  background-color: #f2b7f3;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+#textInput {
+  font-size: 4vw;
+  width: 90vw;
+  height: 15vh;
+}
+
+#shiftInput {
+  width: 15vw;
+  height: 5vh;
+  font-size: 4vw;
+}
+
+select {
+  height: 5vh;
+  font-size: 4vw;
+  width: 30vw;
+  border-radius: 10px;
+}
+
+#selections {
+  font-size: 5vw;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#showText {
+  font-size: 6vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  max-width: 90vw;
+  word-wrap: break-word;
+}
+
+@media (min-width: 1024px) {
+  #inputArea {
+    margin-left: 38vw;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  #inputArea button {
+    position: relative;
+    height: 10vh;
+    width: 220px;
+    top: -3px;
+    left: 10px;
+    font-size: 45px;
+  }
+
+  #textInput {
+    font-size: 30px;
+    width: 400px;
+    height: 100px;
+  }
+
+  #shiftInput {
+    width: 80px;
+    height: 40px;
+    font-size: 30px;
+  }
+
+  select {
+    height: 45px;
+    font-size: 30px;
+    width: 160px;
+  }
+
+  #selections {
+    font-size: 40px;
+    margin-top: 5vh;
+    margin-left: 25vw;
+  }
+
+  #showText {
+    font-size: 50px;
+    margin-left: 50vh;
+    max-width: 1000px;
+  }
+}
